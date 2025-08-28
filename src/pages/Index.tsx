@@ -50,8 +50,8 @@ const Index = () => {
       color: "text-digital-amber",
       requirements: [
         "Use only HTML div elements for segments",
-        "Create JavaScript classes for each segment",
-        "Implement all digits (0-9)",
+        "Create a JavaScript class representing a single segment",
+        "Use the instances of the class to create all the digits",
         "Style segments to look like LED displays",
         "Add animations for digit transitions"
       ]
