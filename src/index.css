@@ -127,6 +127,12 @@ All colors MUST be HSL.
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    background: linear-gradient(135deg, 
+      hsl(316, 45%, 92%) 0%,   /* Soft lavender */
+      hsl(202, 55%, 85%) 25%,  /* Light sky blue */
+      hsl(158, 45%, 88%) 50%,  /* Mint green */
+      hsl(45, 65%, 90%) 75%,   /* Creamy yellow */
+      hsl(340, 40%, 90%) 100%  /* Pale pink */
+    );
   }
 }
