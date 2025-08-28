@@ -135,7 +135,7 @@ const Index = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 digital-font glow-effect text-digital-green">
-            Digital Clock Challenge
+            Raj's Digital Clock Challenge
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Master HTML, CSS, and JavaScript by building progressively complex digital clocks. 
