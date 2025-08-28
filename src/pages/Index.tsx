@@ -254,7 +254,7 @@ const Index = () => {
         </section>
 
         {/* Section 3: Submission Form */}
-        <section id="submit" className="max-w-2xl mx-auto">
+        <section id="submit">
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl text-center">Submit Your Project</CardTitle>
