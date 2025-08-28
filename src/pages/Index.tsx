@@ -7,7 +7,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Code, Palette, Globe, Github, ExternalLink, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import digitalClockIcon from "@/assets/digital-clock-icon.png";
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -51,8 +50,8 @@ const Index = () => {
       color: "text-digital-amber",
       requirements: [
         "Use only HTML div elements for segments",
-        "Create a JavaScript class representing a single segment",
-        "Use the instances of the class to create all the digits",
+        "Create JavaScript classes for each segment",
+        "Implement all digits (0-9)",
         "Style segments to look like LED displays",
         "Add animations for digit transitions"
       ]
@@ -135,21 +134,9 @@ const Index = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-6 mb-6">
-            <img 
-              src={digitalClockIcon} 
-              alt="Digital Clock Display" 
-              className="w-16 h-8 object-contain"
-            />
-            <h1 className="text-5xl font-bold digital-font glow-effect text-digital-green">
-              Raj's Digital Clock Challenge
-            </h1>
-            <img 
-              src={digitalClockIcon} 
-              alt="Digital Clock Display" 
-              className="w-16 h-8 object-contain"
-            />
-          </div>
+          <h1 className="text-5xl font-bold mb-6 digital-font glow-effect text-digital-green">
+            Raj's Digital Clock Challenge
+          </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Master HTML, CSS, and JavaScript by building progressively complex digital clocks. 
             From simple text displays to advanced SVG animations and world time zones.
