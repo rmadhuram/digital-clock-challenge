@@ -5,7 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Code, Palette, Globe, Github, ExternalLink, CheckCircle } from "lucide-react";
+import { Clock, Code, Palette, Globe, Github, ExternalLink, CheckCircle, Info } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
     description: ""
   });
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -185,6 +187,17 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
+                  <div className="mt-4">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => navigate(`/level-${level.number}`)}
+                      className="w-full"
+                    >
+                      <Info className="h-4 w-4 mr-2" />
+                      View Details
+                    </Button>
+                  </div>
                 </CardContent>
                 <div className={`absolute top-0 right-0 w-20 h-20 ${level.color} opacity-10`}>
                   {level.icon}
