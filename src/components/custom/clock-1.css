@@ -1,0 +1,30 @@
+.clock-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.clock-1-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.digits, .colon {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #373636;
+}
+
+.digits {
+  width: 6rem;
+  text-align: center;
+}
+
+.colon {
+  position: relative;
+  bottom: 0.2rem;
+} 

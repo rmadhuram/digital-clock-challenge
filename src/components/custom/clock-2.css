@@ -1,0 +1,85 @@
+.clock-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.seven-segment {
+  position: relative;
+  width: 50px;
+  height: 100px;
+}
+
+.seven-segment .segment {
+  width: 10px;
+  height: 10px;
+}
+
+.seven-segment .segment.segment-0,
+.seven-segment .segment.segment-3,
+.seven-segment .segment.segment-6 {
+  width: 20px;
+  height: 5px;
+}
+
+.seven-segment .segment.segment-1,
+.seven-segment .segment.segment-2,
+.seven-segment .segment.segment-4,
+.seven-segment .segment.segment-5 {
+  width: 5px;
+  height: 20px;
+}
+
+.seven-segment .segment.segment-0 {
+  position: absolute;
+  top: 0;
+  left: 5px;
+}
+
+.seven-segment .segment.segment-1 {
+  position: absolute;
+  top: 5px;
+  left: 25px;
+}
+
+.seven-segment .segment.segment-2 {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+}
+
+.seven-segment .segment.segment-3 {
+  position: absolute;
+  top: 50px;
+  left: 5px;
+}
+
+.seven-segment .segment.segment-4 {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+}
+
+.seven-segment .segment.segment-5 {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+}
+
+.seven-segment .segment.segment-6 {
+  position: absolute;
+  top: 25px;
+  left: 5px;
+}
+
+
+.seven-segment .segment.on {
+  background-color: #000;
+}
+
+.seven-segment .segment.off {
+  background-color: #fff;
+}
+

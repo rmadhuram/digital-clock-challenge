@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Clock, ArrowLeft, CheckCircle, Code, Lightbulb, Target } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-
+import { Clock1 } from "@/components/custom/clock-1";
 const Level1 = () => {
   const navigate = useNavigate();
 
@@ -34,7 +34,16 @@ const Level1 = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <Card>
+          <CardContent>
+            <div className="grid md:grid-cols-1 gap-6 mt-8">
+              <Clock1 />
+            </div>
+          </CardContent>
+        </Card>
+
+        <div className="grid lg:grid-cols-2 gap-8 mt-8">
+
           {/* Requirements Section */}
           <Card>
             <CardHeader>
@@ -53,7 +62,8 @@ const Level1 = () => {
                   "Center the clock on the screen",
                   "Use large, readable fonts",
                   "Update every second",
-                  "Show creativity in styling"
+                  "Show creativity in styling", 
+                  "Use only DOM functions. No external libraries or frameworks."
                 ].map((req, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-digital-green mt-1 flex-shrink-0" />
@@ -87,8 +97,7 @@ const Level1 = () => {
                   <h4 className="font-semibold mb-2">CSS Styling:</h4>
                   <div className="bg-muted p-3 rounded-md text-sm font-mono">
                     font-size: 4rem;<br/>
-                    text-align: center;<br/>
-                    margin-top: 50vh;
+                    text-align: center;
                   </div>
                 </div>
                 <div>
