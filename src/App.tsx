@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import DigitalClockChallenge from "./pages/DigitalClockChallenge";
 import Level1 from "./pages/Level1";
 import Level2 from "./pages/Level2";
 import Level3 from "./pages/Level3";
@@ -20,6 +21,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/digital-clock-challenge" element={<DigitalClockChallenge />} />
           <Route path="/level-1" element={<Level1 />} />
           <Route path="/level-2" element={<Level2 />} />
           <Route path="/level-3" element={<Level3 />} />
