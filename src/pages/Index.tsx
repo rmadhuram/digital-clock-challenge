@@ -52,8 +52,7 @@ const Index = () => {
       color: "text-digital-amber",
       requirements: [
         "Use only HTML div elements for segments",
-        "Create JavaScript classes for each segment",
-        "Implement all digits (0-9)",
+        "Create a JavaScript class to represent a seven segment display",
         "Style segments to look like LED displays",
         "Add animations for digit transitions"
       ]
@@ -90,44 +89,44 @@ const Index = () => {
 
   const studentProjects = [
     {
-      name: "Alex Chen",
-      level: "Level 4",
-      title: "Neon World Clock",
-      description: "Beautiful neon-styled world clock with smooth animations and city backgrounds",
-      githubUrl: "https://github.com/alexchen/neon-world-clock",
-      liveUrl: "https://alexchen.github.io/neon-world-clock",
-      image: "/placeholder.svg",
-      technologies: ["SVG", "CSS Animations", "JavaScript ES6"]
+      name: "Sherlin Jennifer",
+      level: "Level 2",
+      title: "Neon Clock",
+      description: "Beautiful neon-styled clock with a nice background",
+      githubUrl: "https://github.com/SHERLIN2082/7-SEGMENT-CLOCK",
+      liveUrl: "https://sherlin2082.github.io/7-SEGMENT-CLOCK/",
+      image: "/images/sherlin.png",
+      technologies: ["CSS Animations", "JavaScript ES6"]
     },
     {
-      name: "Maria Rodriguez",
-      level: "Level 3",
-      title: "Retro Digital Display",
+      name: "Sivasankari",
+      level: "Level 2",
+      title: "Glowing Digital Display",
       description: "Retro-inspired digital clock with authentic CRT monitor effects",
-      githubUrl: "https://github.com/maria/retro-clock",
-      liveUrl: "https://maria.github.io/retro-clock",
-      image: "/placeholder.svg",
-      technologies: ["SVG", "CSS Filters", "Vintage Styling"]
+      githubUrl: "https://github.com/Sivasankari0510/7_Segment_Clock",
+      liveUrl: "https://sivasankari0510.github.io/7_Segment_Clock/clock.html",
+      image: "/images/sivasankari.png",
+      technologies: ["CSS Animations", "Retro Styling"]
     },
     {
-      name: "Jordan Smith",
+      name: "Akalya",
       level: "Level 2",
       title: "LED Segment Clock",
-      description: "Clean LED-style clock with customizable colors and brightness",
-      githubUrl: "https://github.com/jordan/led-clock",
-      liveUrl: "https://jordan.github.io/led-clock",
-      image: "/placeholder.svg",
-      technologies: ["HTML/CSS", "JavaScript Classes", "CSS Grid"]
+      description: "Clean LED-style clock",
+      githubUrl: "https://github.com/Akal28/7-segment-display",
+      liveUrl: "https://akal28.github.io/7-segment-display/",
+      image: "/images/akalya.png",
+      technologies: ["HTML/CSS", "JavaScript Classes"]
     },
     {
-      name: "Priya Patel",
-      level: "Level 4",
-      title: "Minimalist Time Zones",
-      description: "Clean, minimalist design showing major world cities with weather info",
-      githubUrl: "https://github.com/priya/minimal-world-clock",
-      liveUrl: "https://priya.github.io/minimal-world-clock",
-      image: "/placeholder.svg",
-      technologies: ["React", "Weather API", "Modern CSS"]
+      name: "Aleena Joseph",
+      level: "Level 2",
+      title: "LCD Clock",
+      description: "A nicely constructed LCD clock",
+      githubUrl: "https://github.com/aleena-joseph-86/DigitalClock/tree/main/version2",
+      liveUrl: "",
+      image: "/images/aleena.png",
+      technologies: ["HTML/CSS", "JavaScript"]
     }
   ];
 
