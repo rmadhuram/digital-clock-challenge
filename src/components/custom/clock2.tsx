@@ -24,14 +24,23 @@ export function SevenSegment({ num }: { num: number }) {
   );
 }
 
+export function Separator() {
+  return (
+    <div className="separator">
+      <div className="separator-circle"></div>
+      <div className="separator-circle"></div>
+    </div>
+  );
+}
+
 export default function Clock2() {
   const [time, setTime] = useState(new Date());
-  const [hour1, setHours1] = useState(0);
-  const [hour2, setHours2] = useState(0); 
-  const [minutes1, setMinutes1] = useState(0);
-  const [minutes2, setMinutes2] = useState(0);
-  const [seconds1, setSeconds1] = useState(0);
-  const [seconds2, setSeconds2] = useState(0);
+  const [hour1, setHours1] = useState(time.getHours() % 10);
+  const [hour2, setHours2] = useState(Math.floor(time.getHours() / 10)); 
+  const [minutes1, setMinutes1] = useState(time.getMinutes() % 10);
+  const [minutes2, setMinutes2] = useState(Math.floor(time.getMinutes() / 10));
+  const [seconds1, setSeconds1] = useState(time.getSeconds() % 10);
+  const [seconds2, setSeconds2] = useState(Math.floor(time.getSeconds() / 10));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,8 +59,10 @@ export default function Clock2() {
     <div className="clock-2">
       <SevenSegment num={hour2} />
       <SevenSegment num={hour1} />
+      <Separator />
       <SevenSegment num={minutes2} />
       <SevenSegment num={minutes1} />
+      <Separator />
       <SevenSegment num={seconds2} />
       <SevenSegment num={seconds1} />
     </div>

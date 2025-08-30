@@ -4,9 +4,9 @@ import "./clock-1.css";
 
 export function Clock1() {
   const [time, setTime] = useState(new Date());
-  const [hours, setHours] = useState('00');
-  const [minutes, setMinutes] = useState('00');
-  const [seconds, setSeconds] = useState('00');
+  const [hours, setHours] = useState(time.getHours().toString().padStart(2, '0'));
+  const [minutes, setMinutes] = useState(time.getMinutes().toString().padStart(2, '0'));
+  const [seconds, setSeconds] = useState(time.getSeconds().toString().padStart(2, '0'));
 
   useEffect(() => {
     const interval = setInterval(() => {
