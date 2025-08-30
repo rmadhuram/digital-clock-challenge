@@ -123,7 +123,7 @@ All colors MUST be HSL.
   }
 
   .glow-effect {
-    text-shadow: 0 0 10px hsl(var(--digital-green-glow)), 0 0 20px hsl(var(--digital-green-glow));
+    text-shadow: 0 0 5px hsl(var(--digital-green-glow) / 0.5);
   }
 
   .gradient-bg {
