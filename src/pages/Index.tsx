@@ -82,7 +82,7 @@ const Index = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 digital-font glow-effect text-primary">
+          <h1 className="text-5xl font-bold mb-6 digital-font glow-effect text-foreground">
             Learn Frontend with Raj
           </h1>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
