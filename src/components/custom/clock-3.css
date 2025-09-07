@@ -1,0 +1,72 @@
+:root {
+  --segment-on: #ff2a2a;     
+  --segment-off: #2b2b2b;    
+  --glow-color: #ff6b6b;     
+  --bg: #0b0b0b;             
+}
+
+.clock-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.25rem, 1.5vw, 1rem);
+  height: 100%;
+  padding: clamp(8px, 2vw, 24px);
+  background: radial-gradient(1200px 600px at 50% 50%, #131313, var(--bg));
+}
+
+.clock-3-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.25rem, 2vw, 1.25rem);
+}
+
+.digit-svg {
+  width: clamp(28px, 10vw, 110px);
+  height: auto;
+  display: block;
+}
+
+.colon-svg {
+  width: clamp(10px, 3.2vw, 36px);
+  height: auto;
+  display: block;
+  transform: translateY(-2%);
+}
+
+.seg {
+  fill: var(--segment-off);
+  opacity: 0.22;
+  transition: fill 260ms ease, opacity 260ms ease, filter 260ms ease;
+}
+
+
+.seg.on {
+  fill: url(#gradOn);
+  opacity: 1;
+  filter: url(#outerGlow);
+  animation: pulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0%   { filter: url(#outerGlow); }
+  100% { filter: url(#outerGlowStrong); }
+}
+
+.colon-dot {
+  fill: var(--segment-on);
+  filter: url(#outerGlowSmall);
+  opacity: 0.85;
+  transition: opacity 240ms ease;
+}
+
+.colon-dot.dim {
+  opacity: 0.25;
+  filter: none;
+}
+
+.clock-3-wrap {
+  max-width: min(92vw, 1200px);
+  margin: 0 auto;
+}

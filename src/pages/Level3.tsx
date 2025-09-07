@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Palette, ArrowLeft, CheckCircle, Lightbulb, Target, Sparkles } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import Clock3 from "@/components/custom/clock-3";
+
 
 const Level3 = () => {
   const navigate = useNavigate();
@@ -33,6 +35,13 @@ const Level3 = () => {
             </p>
           </div>
         </div>
+        <Card>
+          <CardContent>
+            <div className="grid md:grid-cols-1 gap-6 mt-8">
+              <Clock3 />
+            </div>
+          </CardContent>
+        </Card>
 
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Requirements Section */}
