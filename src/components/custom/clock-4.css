@@ -1,69 +1,69 @@
 .world-clock {
   display: grid;
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
-@media (min-width: 768px) {
-  .world-clock {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .city-card {
-  background: hsl(var(--card));
-  color: hsl(var(--card-foreground));
   border-radius: 1rem;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-  transition: transform 0.2s ease;
+  padding: 0.1rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.city-card.day {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  color: #111;
+}
+
+.city-card.night {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: #f1f1f1;
 }
 
 .city-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .city-header {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.city-time {
+  font-size: 1.8rem;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+}
+
+/* ✅ Make smaller time */
+.small-time {
+  font-size: 1.2rem;
 }
 
 .city-flag {
-  font-size: 1.5rem;
-}
-
-.time {
-  font-family: 'Courier New', monospace;
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0.5rem 0;
-}
-
-.day {
-  background: linear-gradient(135deg, #87ceeb, #f0e68c);
-}
-
-.night {
-  background: linear-gradient(135deg, #1c1c3c, #0a0a1a);
-  color: #f0f0f0;
-}
-
-.day .city-header {
-  color: #222;
-}
-
-.night .city-header {
-  color: #f0f0f0;
+  font-size: 1.2rem;
 }
 
 .icon {
-  font-size: 1.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.sun {
+  color: #f9d71c;
+}
+
+.moon {
+  color: #cbd5e1;
 }

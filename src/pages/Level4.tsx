@@ -53,7 +53,7 @@ const Level4 = () => {
             </CardContent>
           </Card>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-10 mt-8">
           {/* Requirements Section */}
           <Card>
             <CardHeader>

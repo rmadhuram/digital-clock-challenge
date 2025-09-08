@@ -11,6 +11,7 @@ import Level2 from "./pages/Level2";
 import Level3 from "./pages/Level3";
 import Level4 from "./pages/Level4";
 
+
 const queryClient = new QueryClient();
 
 const App = () => (

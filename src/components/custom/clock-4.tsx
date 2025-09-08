@@ -1,35 +1,16 @@
 import { useEffect, useState } from "react";
 import "./clock-4.css";
+import { Sun, Moon } from "lucide-react";
+import WorldClockDisplay from "./SevenSegmentDisplay"; // ✅ reuse Level 3 component
 
 function useTimeZone(timeZone: string) {
   const [now, setNow] = useState(new Date());
-
   useEffect(() => {
     const id = setInterval(() => setNow(new Date()), 1000);
     return () => clearInterval(id);
   }, []);
-
-  const formatter = new Intl.DateTimeFormat("en-GB", {
-    timeZone,
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: false,
-  });
-
-  const timeString = formatter.format(now);
-
-  const hour = Number(
-    new Intl.DateTimeFormat("en-GB", {
-      timeZone,
-      hour: "2-digit",
-      hour12: false,
-    }).format(now)
-  );
-
-  return { timeString, hour };
+  return new Date(now.toLocaleString("en-US", { timeZone }));
 }
-
 
 const cities = [
   { name: "New York", tz: "America/New_York", flag: "🇺🇸" },
@@ -38,24 +19,41 @@ const cities = [
   { name: "Sydney", tz: "Australia/Sydney", flag: "🇦🇺" },
   { name: "Paris", tz: "Europe/Paris", flag: "🇫🇷" },
   { name: "Dubai", tz: "Asia/Dubai", flag: "🇦🇪" },
-  { name: "New Delhi", tz: "Asia/Kolkata", flag: "🇮🇳" },
-  { name: "São Paulo", tz: "America/Sao_Paulo", flag: "🇧🇷" },
+  { name: "India", tz: "Asia/Kolkata", flag: "🇮🇳" },   // ✅ Added India
+  { name: "Toronto", tz: "America/Toronto", flag: "🇨🇦" } // ✅ Added Canada (Toronto)
 ];
 
-export default function WorldClock() {
+function isDayTime(hour: number) {
+  return hour >= 6 && hour < 18;
+}
+
+export default function Clock4() {
   return (
     <div className="world-clock">
       {cities.map((city) => {
-        const { timeString, hour } = useTimeZone(city.tz);
-        const isDay = hour >= 6 && hour < 18;
+        const cityTime = useTimeZone(city.tz);
+        const hour = cityTime.getHours();
+        const dayTime = isDayTime(hour);
+
         return (
-          <div key={city.name} className={`city-card ${isDay ? "day" : "night"}`}>
+          <div
+            key={city.name}
+            className={`city-card ${dayTime ? "day" : "night"}`}
+          >
             <div className="city-header">
               <span className="city-flag">{city.flag}</span>
               {city.name}
-              <span className="icon">{isDay ? "☀️" : "🌙"}</span>
+              {dayTime ? (
+                <Sun className="icon sun" />
+              ) : (
+                <Moon className="icon moon" />
+              )}
             </div>
-            <div className="time">{timeString}</div>
+
+            {/* ✅ reuse component (make clock smaller) */}
+            <div className="city-time small-time">
+              <WorldClockDisplay date={cityTime} variant="text" />
+            </div>
           </div>
         );
       })}
