@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Book, Code, Palette, Clock, ExternalLink, ArrowRight, Layers, FileText, Zap } from "lucide-react";
+import { Book, Code, Palette, Clock, ExternalLink, ArrowRight, Layers, FileText, Zap, CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
@@ -61,6 +61,17 @@ const Index = () => {
         "React Fundamentals",
         "State Management",
         "Component Architecture"
+      ]
+    },
+    {
+      title: "Best Practices",
+      description: "Industry standards, code quality guidelines, and style guides for professional development",
+      icon: <CheckCircle className="h-6 w-6" />,
+      color: "text-purple-600",
+      resources: [
+        "JavaScript Style Guides",
+        "Code Review Guidelines",
+        "Performance Best Practices"
       ]
     }
   ];
