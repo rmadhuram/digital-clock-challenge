@@ -57,13 +57,13 @@ function SevenSegDigit({ value }: DigitProps) {
         </filter>
       </defs>
 
-      <rect className={`seg ${seg[0] ? "on" : ""}`} x="15" y="8" width="70" height="12" rx="6" ry="6" />
-      <rect className={`seg ${seg[1] ? "on" : ""}`} x="83" y="20" width="12" height="65" rx="6" ry="6" />
-      <rect className={`seg ${seg[2] ? "on" : ""}`} x="83" y="95" width="12" height="65" rx="6" ry="6" />
-      <rect className={`seg ${seg[3] ? "on" : ""}`} x="15" y="168" width="70" height="12" rx="6" ry="6" />
-      <rect className={`seg ${seg[4] ? "on" : ""}`} x="5" y="95" width="12" height="65" rx="6" ry="6" />
-      <rect className={`seg ${seg[5] ? "on" : ""}`} x="5" y="20" width="12" height="65" rx="6" ry="6" />
-      <rect className={`seg ${seg[6] ? "on" : ""}`} x="15" y="90" width="70" height="12" rx="6" ry="6" />
+      <rect className={`seg ${seg[0] ? "on" : ""}`} x="21" y="8" width="58" height="12" rx="4" ry="4" />
+      <rect className={`seg ${seg[1] ? "on" : ""}`} x="83" y="8.5" width="12" height="80" rx="3" ry="3" />
+      <rect className={`seg ${seg[2] ? "on" : ""}`} x="83" y="100" width="12" height="80" rx="3" ry="3" />
+      <rect className={`seg ${seg[3] ? "on" : ""}`} x="21" y="167" width="58" height="12" rx="4" ry="4" />
+      <rect className={`seg ${seg[4] ? "on" : ""}`} x="5" y="100" width="12" height="80" rx="3" ry="3" />
+      <rect className={`seg ${seg[5] ? "on" : ""}`} x="5" y="8" width="12" height="80" rx="3" ry="3" />
+      <rect className={`seg ${seg[6] ? "on" : ""}`} x="21" y="88" width="58" height="12" rx="4" ry="4" />
     </svg>
   );
 }

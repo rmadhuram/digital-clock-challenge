@@ -8,7 +8,7 @@
 .clock-3-wrap {
   max-width: min(90vw, 900px);  
   margin: 0.6rem auto 0.6rem;   
-  padding: 0.1rem;
+  padding: 0.3rem;
   background: linear-gradient(135deg, #202020, #0b0b0b);
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);

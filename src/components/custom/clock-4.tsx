@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./clock-4.css";
 import { Sun, Moon } from "lucide-react";
-import WorldClockDisplay from "./SevenSegmentDisplay"; // ✅ reuse Level 3 component
+import WorldClockDisplay from "./SevenSegmentDisplay";
 
 function useTimeZone(timeZone: string) {
   const [now, setNow] = useState(new Date());
@@ -19,8 +19,8 @@ const cities = [
   { name: "Sydney", tz: "Australia/Sydney", flag: "🇦🇺" },
   { name: "Paris", tz: "Europe/Paris", flag: "🇫🇷" },
   { name: "Dubai", tz: "Asia/Dubai", flag: "🇦🇪" },
-  { name: "India", tz: "Asia/Kolkata", flag: "🇮🇳" },   // ✅ Added India
-  { name: "Toronto", tz: "America/Toronto", flag: "🇨🇦" } // ✅ Added Canada (Toronto)
+  { name: "India", tz: "Asia/Kolkata", flag: "🇮🇳" },   
+  { name: "Toronto", tz: "America/Toronto", flag: "🇨🇦" } 
 ];
 
 function isDayTime(hour: number) {
@@ -50,7 +50,6 @@ export default function Clock4() {
               )}
             </div>
 
-            {/* ✅ reuse component (make clock smaller) */}
             <div className="city-time small-time">
               <WorldClockDisplay date={cityTime} variant="text" />
             </div>
